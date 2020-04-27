@@ -37,7 +37,13 @@ def TodoComplete(request, todo_id):
     todo.save()
     return redirect('index')
 
+def deleteCompleted(request):
+    Todo.objects.filter(completed=True).delete()
+    return redirect('index')
+
 class TodoDeleteView(DeleteView):
     model = Todo
     template_name = 'todoApp/delete.html'
     success_url = reverse_lazy('index')
+
+
