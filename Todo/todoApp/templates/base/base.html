@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CRUD app</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<title>Todo App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	
+	<style>
+		.hello-msg{
+		  font-size: 18px;
+		  color: #fff;
+		  margin-right:30px;
+		  text-align-last: right;
+		}
+	  </style>
+
 </head>
 <body>
 	<nav class="navbar navbar-dark " style="background-color: rgb(150, 75, 91)">
-		<span style="color:aliceblue" class="navbar-brand mb-0 h1">TODO APP WITH DJANGO</span>
+		<br><span style="color:aliceblue" class="navbar-toggler mb-0 h3">TODO APP WITH DJANGO</span><br>
+		<span class="hello-msg">Hello, {{request.user}}</span>
+		<span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span><br>
+		  
 	</nav>
 
 {% block content %}
