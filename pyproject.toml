@@ -6,7 +6,7 @@ authors = ["Kader Miyanyedi <kadermiyanyedi@hotmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-django = "^3.0.7"
+django = "^3.0.14"
 django-crispy-forms = "^1.9.0"
 psycopg2-binary = "^2.8.5"
 
